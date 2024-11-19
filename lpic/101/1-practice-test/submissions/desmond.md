@@ -37,7 +37,7 @@
    | apt | dpkg |
    |------|------|
    | apt is a high level package manager | dpkg is a low level package manager |
-   | apt is more provides switches with a more user friendly format eg `apt install` | dpkg provides switches with a less user friendly format |
+   | apt is more provides switches with a more user friendly format eg `apt install` | dpkg provides switches with a less user friendly format e.g. `dpkg -i`|
    | apt manages dependences | dpkg does not manage dependencies |
 7. `sudo apt auto remove`
 
@@ -106,4 +106,4 @@
       - The firmware loads the first sequence of the bootloader called the `bootstrap program`
       - the first sequence of the bootloader loads the second sequence of the bootloader
       - the second sequence of the bootloader loads the kernel
-      - the kernel 
+      - the kernel loads the initramfs and executes the scripts associated with the different services
