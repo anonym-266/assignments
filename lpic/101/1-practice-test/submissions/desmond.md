@@ -66,6 +66,7 @@
     By default, the cron daemond runs the scipt in the home directory of the user who created it unless the variable `HOME` points to another path in the crontab.
     If the output of the cron isn't redirected to a file, it is mailed to the user who created it unless the varable `MAILTO` points to an empty string in the crontab 
     > Example
+    
       0 0 * * * ./backup.sh
 
 ***
@@ -92,18 +93,27 @@
     - Enter p for primary partition
     - Press on `Enter` to select the default first sector or enter a custum one
     - Press on `Enter` to create a partition on all the unallocated space or enter a custum space (e.g. 4G for 4 gigabytes)
+    - Enter w to write the changes into the disk
+
+      
 18. The /etc/fstab is a configuration directory used to store configutions for all currently mounted filesystems
-19. example of an entry is
-20. `LABEL=cloudimg-rootfs	/	 ext4	discard,errors=remount-ro	0 1`
+    example of an entry is
+    `LABEL=cloudimg-rootfs	/	 ext4	discard,errors=remount-ro	0 1`
+    
+    ***
 
-21. ***
+ ### Bonus Question
 
-22. ### Bonus Question
+> **The boot process**
 
-23. > **The boot process**
     When the computer is powered on, the following activities take place:
+    
       - The firmware carries out the POST(Power On Self Test), and checks if the basic components required to boot the system are operational
+      
       - The firmware loads the first sequence of the bootloader called the `bootstrap program`
+      
       - the first sequence of the bootloader loads the second sequence of the bootloader
+      
       - the second sequence of the bootloader loads the kernel
+      
       - the kernel loads the initramfs and executes the scripts associated with the different services
